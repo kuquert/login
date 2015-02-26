@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ResiterViewController.h
 //  login
 //
 //  Created by Marcus Vinicius Kuquert on 2/26/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RegisterViewController : UIViewController
 
 @end
-
