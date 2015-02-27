@@ -16,11 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="airBaloon@x2.png" translatesAutoresizingMaskIntoConstraints="NO" id="LAG-4L-30E">
-                                <rect key="frame" x="105" y="20" width="164" height="234"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zZS-aQ-lku">
-                                <rect key="frame" x="210" y="353" width="89" height="36"/>
+                                <rect key="frame" x="210" y="368" width="89" height="36"/>
                                 <color key="backgroundColor" red="0.81176470590000005" green="0.0" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZU-Pf-g9n">
-                                <rect key="frame" x="76" y="353" width="89" height="36"/>
+                                <rect key="frame" x="76" y="368" width="89" height="36"/>
                                 <color key="backgroundColor" red="0.23921568627450981" green="0.0" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Sign up">
@@ -45,15 +42,18 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lcf-Bw-UK2">
-                                <rect key="frame" x="76" y="262" width="223" height="30"/>
+                                <rect key="frame" x="76" y="277" width="223" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxo-JG-RcU">
-                                <rect key="frame" x="76" y="306" width="223" height="30"/>
+                                <rect key="frame" x="76" y="321" width="223" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="airBaloon@x2.png" translatesAutoresizingMaskIntoConstraints="NO" id="LAG-4L-30E">
+                                <rect key="frame" x="105" y="35" width="164" height="234"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.47843137254901963" green="0.0" blue="0.16078431372549021" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -73,7 +73,6 @@
         <!--Item 2-->
         <scene sceneID="M37-bS-a7N">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cjQ-Yu-gGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="9i1-Qf-2HI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OPi-kK-rvF"/>
@@ -87,13 +86,13 @@
                     <tabBarItem key="tabBarItem" title="Item 2" id="D8Y-gH-wes"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjQ-Yu-gGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1350" y="-779"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="9JL-EQ-ytO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FNx-Ti-0Xv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="q33-ca-MIs" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cdk-14-Uh5"/>
@@ -107,6 +106,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="JnN-VA-duc"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNx-Ti-0Xv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1350" y="-1441"/>
         </scene>
@@ -133,8 +133,6 @@
         <!--main-->
         <scene sceneID="4Wz-nb-kyT">
             <objects>
-                <exit id="ocn-wO-qJf" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jMt-cp-0RN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="main" id="GbQ-tN-ina" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SPs-0I-Mh2"/>
@@ -178,6 +176,8 @@
                         <outlet property="logoutButton" destination="Q7T-yg-nux" id="X3U-VS-842"/>
                     </connections>
                 </viewController>
+                <exit id="ocn-wO-qJf" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMt-cp-0RN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1206.5" y="-44.5"/>
         </scene>

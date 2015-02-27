@@ -7,6 +7,7 @@
 //
 
 #import "RegisterViewController.h"
+#import "MainViewController.h"
 #import "User.h"
 
 @interface RegisterViewController ()
@@ -17,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
+@property User *nwUser;
 
 @end
 
@@ -40,19 +42,25 @@
 }
 
 - (IBAction)doneButton:(UIButton *)sender {
-    User *newUser = [[User alloc] init];
-    newUser.name=_nameField.text;
-    newUser.email=_emailField.text;
-    newUser.password=_passwordField.text;
-    newUser.username=_usernameField.text;
+    
+    _nwUser = [[User alloc] init];
+    _nwUser.name=_nameField.text;
+    _nwUser.email=_emailField.text;
+    _nwUser.password=_passwordField.text;
+    _nwUser.username=_usernameField.text;
     
     NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Users" ofType:@"plist"]];
-    NSLog(@"%@", [newUser createDictionaryForUSer:newUser]);
-    [array addObject:[newUser createDictionaryForUSer:newUser]];
+    NSLog(@"%@", [_nwUser createDictionaryForUSer:_nwUser]);
+    [array addObject:[_nwUser createDictionaryForUSer:_nwUser]];
     NSLog(@"%@", array);
     NSLog(@"%d", [array writeToFile:[[NSBundle mainBundle] pathForResource:@"Users" ofType:@"plist"] atomically:YES]);
     [self performSegueWithIdentifier:@"gotoMain" sender:sender];
 }
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"gotoMain"]) {
+        MainViewController *main = (MainViewController *)segue.destinationViewController;
+        main.user = _nwUser;
+    }
+}
 
 @end
