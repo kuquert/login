@@ -7,32 +7,48 @@
 //
 
 #import "MainViewController.h"
+#import "LoginViewController.h"
 
 @interface MainViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property NSArray *array;
 
 @end
 
 @implementation MainViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    _logoutButton.layer.cornerRadius = 16;
+    _logoutButton.layer.borderColor = [[UIColor whiteColor] CGColor];
+    _logoutButton.layer.borderWidth = 1;
+    _array =[[NSArray alloc]initWithObjects:@"A", @"B", @"C", @"D", nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Entro no mainViewController");
-    // Do any additional setup after loading the view.
+    _label.text = self.user.name;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    LoginViewController *lvc = (LoginViewController *)segue.destinationViewController;
+    lvc.usernameField.text = nil;
+    lvc.passwordField.text = nil;
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [_array count];
 }
-*/
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    cell.textLabel.text = [_array objectAtIndex:[indexPath row]];
+    return cell;
+}
 
 @end

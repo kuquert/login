@@ -7,7 +7,10 @@
 //
 
 #import "LoginViewController.h"
+#import "User.h"
 
-@interface MainViewController : LoginViewController
+@interface MainViewController : LoginViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property User *user;
 
 @end

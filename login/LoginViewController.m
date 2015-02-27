@@ -10,16 +10,25 @@
 #import "MainViewController.h"
 
 @interface LoginViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *usernameField;
-@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+
+@property (weak, nonatomic) IBOutlet UIButton *signinButton;
+@property (weak, nonatomic) IBOutlet UIButton *signupButton;
 
 @end
 
 @implementation LoginViewController
-
+-(void)viewWillAppear:(BOOL)animated{
+    _signinButton.layer.cornerRadius = 18;
+    _signinButton.layer.borderColor = [[UIColor whiteColor] CGColor];
+    _signinButton.layer.borderWidth = 1;
+    
+    _signupButton.layer.cornerRadius = 18;
+    _signupButton.layer.borderColor = [[UIColor whiteColor] CGColor];
+    _signupButton.layer.borderWidth = 1;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 - (IBAction)loginButton:(UIButton *)sender {
     
@@ -32,6 +41,7 @@
            [[_passwordField text] isEqualToString:[users valueForKey:@"password"]])
         {
             didFail = NO;
+            _user = [[User alloc] initWithDictioary:users];
             [self performSegueWithIdentifier:@"gotoMain" sender:sender];
              break;
         }
@@ -43,13 +53,17 @@
         [fail show];
     }
 }
--(IBAction)backFromRegister:(UIStoryboardSegue *)segue{
-    
-    MainViewController *vcd = (MainViewController   *)segue.sourceViewController;
-    
-    NSLog(@"%@", vcd);
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"gotoMain"]) {
+        MainViewController *main = (MainViewController *)segue.destinationViewController;
+        main.user = _user;
+    }
 }
 
+-(IBAction)backToLogin:(UIStoryboardSegue *)segue{
+    
+}
 
 
 @end

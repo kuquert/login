@@ -7,34 +7,52 @@
 //
 
 #import "RegisterViewController.h"
+#import "User.h"
 
 @interface RegisterViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *emailField;
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 @end
 
 @implementation RegisterViewController
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    _cancelButton.layer.cornerRadius = 18;
+    _cancelButton.layer.borderColor = [[UIColor whiteColor] CGColor];
+    _cancelButton.layer.borderWidth = 1;
+    
+    _doneButton.layer.cornerRadius = 18;
+    _doneButton.layer.borderColor = [[UIColor whiteColor] CGColor];
+    _doneButton.layer.borderWidth = 1;
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-- (IBAction)cancelButton:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"backFromRegister" sender:sender];
+- (IBAction)doneButton:(UIButton *)sender {
+    User *newUser = [[User alloc] init];
+    newUser.name=_nameField.text;
+    newUser.email=_emailField.text;
+    newUser.password=_passwordField.text;
+    newUser.username=_usernameField.text;
+    
+    NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Users" ofType:@"plist"]];
+    NSLog(@"%@", [newUser createDictionaryForUSer:newUser]);
+    [array addObject:[newUser createDictionaryForUSer:newUser]];
+    NSLog(@"%@", array);
+    NSLog(@"%d", [array writeToFile:[[NSBundle mainBundle] pathForResource:@"Users" ofType:@"plist"] atomically:YES]);
+    [self performSegueWithIdentifier:@"gotoMain" sender:sender];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

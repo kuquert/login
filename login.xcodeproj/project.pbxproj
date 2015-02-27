@@ -17,6 +17,8 @@
 		356E41D91A9FA6CE00202806 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E41D81A9FA6CE00202806 /* MainViewController.m */; };
 		356E41DC1A9FAB7600202806 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E41DB1A9FAB7600202806 /* RegisterViewController.m */; };
 		356E41DE1A9FAC1700202806 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 356E41DD1A9FAC1700202806 /* Users.plist */; };
+		356E41E11AA0AA8A00202806 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E41E01AA0AA8A00202806 /* User.m */; };
+		356E41F31AA0F03500202806 /* airBaloon@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 356E41F21AA0F03500202806 /* airBaloon@x2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		356E41DA1A9FAB7600202806 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		356E41DB1A9FAB7600202806 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		356E41DD1A9FAC1700202806 /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
+		356E41DF1AA0AA8A00202806 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		356E41E01AA0AA8A00202806 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		356E41F21AA0F03500202806 /* airBaloon@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airBaloon@x2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,15 +94,18 @@
 		356E41B01A9FA47D00202806 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				356E41F21AA0F03500202806 /* airBaloon@x2.png */,
 				356E41B51A9FA47D00202806 /* AppDelegate.h */,
 				356E41B61A9FA47D00202806 /* AppDelegate.m */,
 				356E41D71A9FA6CE00202806 /* MainViewController.h */,
 				356E41D81A9FA6CE00202806 /* MainViewController.m */,
-				356E41B81A9FA47D00202806 /* LoginViewController.h */,
-				356E41B91A9FA47D00202806 /* LoginViewController.m */,
 				356E41DA1A9FAB7600202806 /* RegisterViewController.h */,
 				356E41DB1A9FAB7600202806 /* RegisterViewController.m */,
+				356E41B81A9FA47D00202806 /* LoginViewController.h */,
+				356E41B91A9FA47D00202806 /* LoginViewController.m */,
 				356E41BB1A9FA47D00202806 /* Main.storyboard */,
+				356E41DF1AA0AA8A00202806 /* User.h */,
+				356E41E01AA0AA8A00202806 /* User.m */,
 				356E41BE1A9FA47D00202806 /* Images.xcassets */,
 				356E41C01A9FA47D00202806 /* LaunchScreen.xib */,
 				356E41DD1A9FAC1700202806 /* Users.plist */,
@@ -181,9 +189,11 @@
 				TargetAttributes = {
 					356E41AD1A9FA47D00202806 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = BJXVASWXX8;
 					};
 					356E41C61A9FA47E00202806 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = BJXVASWXX8;
 						TestTargetID = 356E41AD1A9FA47D00202806;
 					};
 				};
@@ -215,6 +225,7 @@
 				356E41BD1A9FA47D00202806 /* Main.storyboard in Resources */,
 				356E41C21A9FA47D00202806 /* LaunchScreen.xib in Resources */,
 				356E41BF1A9FA47D00202806 /* Images.xcassets in Resources */,
+				356E41F31AA0F03500202806 /* airBaloon@x2.png in Resources */,
 				356E41DE1A9FAC1700202806 /* Users.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +246,7 @@
 			files = (
 				356E41BA1A9FA47D00202806 /* LoginViewController.m in Sources */,
 				356E41B71A9FA47D00202806 /* AppDelegate.m in Sources */,
+				356E41E11AA0AA8A00202806 /* User.m in Sources */,
 				356E41B41A9FA47D00202806 /* main.m in Sources */,
 				356E41DC1A9FAB7600202806 /* RegisterViewController.m in Sources */,
 				356E41D91A9FA6CE00202806 /* MainViewController.m in Sources */,
@@ -379,6 +391,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -390,6 +404,7 @@
 				INFOPLIST_FILE = loginTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/login.app/login";
 			};
 			name = Debug;
@@ -398,6 +413,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -405,6 +422,7 @@
 				INFOPLIST_FILE = loginTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/login.app/login";
 			};
 			name = Release;
@@ -428,6 +446,7 @@
 				356E41D31A9FA47E00202806 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		356E41D41A9FA47E00202806 /* Build configuration list for PBXNativeTarget "loginTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +455,7 @@
 				356E41D61A9FA47E00202806 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
