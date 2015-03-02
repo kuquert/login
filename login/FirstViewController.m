@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Marcus Vinicius Kuquert. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "FirstViewController.h"
 #import "LoginViewController.h"
 
-@interface MainViewController ()
+@interface FirstViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation MainViewController
+@implementation FirstViewController
 
 -(void)viewWillAppear:(BOOL)animated{
     _logoutButton.layer.cornerRadius = 16;

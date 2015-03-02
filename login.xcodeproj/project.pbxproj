@@ -14,11 +14,14 @@
 		356E41BF1A9FA47D00202806 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356E41BE1A9FA47D00202806 /* Images.xcassets */; };
 		356E41C21A9FA47D00202806 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356E41C01A9FA47D00202806 /* LaunchScreen.xib */; };
 		356E41CE1A9FA47E00202806 /* loginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E41CD1A9FA47E00202806 /* loginTests.m */; };
-		356E41D91A9FA6CE00202806 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E41D81A9FA6CE00202806 /* MainViewController.m */; };
+		356E41D91A9FA6CE00202806 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E41D81A9FA6CE00202806 /* FirstViewController.m */; };
 		356E41DC1A9FAB7600202806 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E41DB1A9FAB7600202806 /* RegisterViewController.m */; };
 		356E41DE1A9FAC1700202806 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 356E41DD1A9FAC1700202806 /* Users.plist */; };
 		356E41E11AA0AA8A00202806 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E41E01AA0AA8A00202806 /* User.m */; };
 		356E41F31AA0F03500202806 /* airBaloon@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 356E41F21AA0F03500202806 /* airBaloon@x2.png */; };
+		551C68911AA2B17F007654CE /* MainTabBarContrroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 551C68901AA2B17F007654CE /* MainTabBarContrroller.m */; };
+		551C68941AA2B728007654CE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551C68931AA2B728007654CE /* SecondViewController.m */; };
+		551C689E1AA2C05B007654CE /* Bitmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 551C689D1AA2C05B007654CE /* Bitmap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +48,19 @@
 		356E41C71A9FA47E00202806 /* loginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		356E41CC1A9FA47E00202806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		356E41CD1A9FA47E00202806 /* loginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loginTests.m; sourceTree = "<group>"; };
-		356E41D71A9FA6CE00202806 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		356E41D81A9FA6CE00202806 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		356E41D71A9FA6CE00202806 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		356E41D81A9FA6CE00202806 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		356E41DA1A9FAB7600202806 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		356E41DB1A9FAB7600202806 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		356E41DD1A9FAC1700202806 /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
 		356E41DF1AA0AA8A00202806 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		356E41E01AA0AA8A00202806 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		356E41F21AA0F03500202806 /* airBaloon@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airBaloon@x2.png"; sourceTree = "<group>"; };
+		551C688F1AA2B17F007654CE /* MainTabBarContrroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarContrroller.h; sourceTree = "<group>"; };
+		551C68901AA2B17F007654CE /* MainTabBarContrroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarContrroller.m; sourceTree = "<group>"; };
+		551C68921AA2B728007654CE /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		551C68931AA2B728007654CE /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		551C689D1AA2C05B007654CE /* Bitmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bitmap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,13 +102,18 @@
 		356E41B01A9FA47D00202806 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				551C689D1AA2C05B007654CE /* Bitmap.png */,
 				356E41F21AA0F03500202806 /* airBaloon@x2.png */,
 				356E41B51A9FA47D00202806 /* AppDelegate.h */,
 				356E41B61A9FA47D00202806 /* AppDelegate.m */,
-				356E41D71A9FA6CE00202806 /* MainViewController.h */,
-				356E41D81A9FA6CE00202806 /* MainViewController.m */,
+				551C68921AA2B728007654CE /* SecondViewController.h */,
+				551C68931AA2B728007654CE /* SecondViewController.m */,
+				356E41D71A9FA6CE00202806 /* FirstViewController.h */,
+				356E41D81A9FA6CE00202806 /* FirstViewController.m */,
 				356E41DA1A9FAB7600202806 /* RegisterViewController.h */,
 				356E41DB1A9FAB7600202806 /* RegisterViewController.m */,
+				551C688F1AA2B17F007654CE /* MainTabBarContrroller.h */,
+				551C68901AA2B17F007654CE /* MainTabBarContrroller.m */,
 				356E41B81A9FA47D00202806 /* LoginViewController.h */,
 				356E41B91A9FA47D00202806 /* LoginViewController.m */,
 				356E41BB1A9FA47D00202806 /* Main.storyboard */,
@@ -189,11 +202,11 @@
 				TargetAttributes = {
 					356E41AD1A9FA47D00202806 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = BJXVASWXX8;
+						DevelopmentTeam = 7S28PM95JC;
 					};
 					356E41C61A9FA47E00202806 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = BJXVASWXX8;
+						DevelopmentTeam = 7S28PM95JC;
 						TestTargetID = 356E41AD1A9FA47D00202806;
 					};
 				};
@@ -224,6 +237,7 @@
 			files = (
 				356E41BD1A9FA47D00202806 /* Main.storyboard in Resources */,
 				356E41C21A9FA47D00202806 /* LaunchScreen.xib in Resources */,
+				551C689E1AA2C05B007654CE /* Bitmap.png in Resources */,
 				356E41BF1A9FA47D00202806 /* Images.xcassets in Resources */,
 				356E41F31AA0F03500202806 /* airBaloon@x2.png in Resources */,
 				356E41DE1A9FAC1700202806 /* Users.plist in Resources */,
@@ -245,11 +259,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				356E41BA1A9FA47D00202806 /* LoginViewController.m in Sources */,
+				551C68911AA2B17F007654CE /* MainTabBarContrroller.m in Sources */,
 				356E41B71A9FA47D00202806 /* AppDelegate.m in Sources */,
 				356E41E11AA0AA8A00202806 /* User.m in Sources */,
+				551C68941AA2B728007654CE /* SecondViewController.m in Sources */,
 				356E41B41A9FA47D00202806 /* main.m in Sources */,
 				356E41DC1A9FAB7600202806 /* RegisterViewController.m in Sources */,
-				356E41D91A9FA6CE00202806 /* MainViewController.m in Sources */,
+				356E41D91A9FA6CE00202806 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,9 +387,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = login/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -381,9 +400,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = login/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

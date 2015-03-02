@@ -7,7 +7,9 @@
 //
 
 #import "RegisterViewController.h"
-#import "MainViewController.h"
+#import "FirstViewController.h"
+#import "MainTabBarContrroller.h"
+
 #import "User.h"
 
 @interface RegisterViewController ()
@@ -58,7 +60,8 @@
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"gotoMain"]) {
-        MainViewController *main = (MainViewController *)segue.destinationViewController;
+        MainTabBarContrroller  *tabBar = (MainTabBarContrroller *)segue.destinationViewController;
+        FirstViewController *main = (FirstViewController *)[tabBar.viewControllers objectAtIndex:0];
         main.user = _nwUser;
     }
 }
